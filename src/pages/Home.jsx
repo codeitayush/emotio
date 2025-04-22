@@ -5,9 +5,6 @@ const HeroSection = lazy(() => import('../components/home/HeroSection'));
 const FeaturesSection = lazy(() =>
   import('../components/home/FeaturesSection')
 );
-const CategoriesSection = lazy(() =>
-  import('../components/home/CategoriesSection')
-);
 const PopularProductsSection = lazy(() =>
   import('../components/home/PopularProductsSection')
 );
@@ -18,7 +15,6 @@ const NewsletterSection = lazy(() =>
 // Import skeleton loaders
 import HeroSkeleton from '../components/skeletons/HeroSkeleton';
 import FeaturesSkeleton from '../components/skeletons/FeaturesSkeleton';
-import CategoriesSkeleton from '../components/skeletons/CategoriesSkeleton';
 import ProductsSkeleton from '../components/skeletons/ProductsSkeleton';
 import NewsletterSkeleton from '../components/skeletons/NewsletterSkeleton';
 
@@ -31,10 +27,6 @@ const Home = () => {
 
       <Suspense fallback={<FeaturesSkeleton />}>
         <FeaturesSection />
-      </Suspense>
-
-      <Suspense fallback={<CategoriesSkeleton />}>
-        <CategoriesSection />
       </Suspense>
 
       <Suspense fallback={<ProductsSkeleton />}>
