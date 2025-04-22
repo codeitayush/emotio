@@ -129,13 +129,13 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to={slide.primaryButtonLink}
-                  className="bg-white text-gray-900 hover:bg-gray-100 py-3 px-8 rounded-md font-medium transition-colors"
+                  className="bg-primary-50 text-primary-900 hover:bg-primary-100 py-3 px-8 rounded-md font-medium transition-colors"
                 >
                   {slide.primaryButtonText}
                 </Link>
                 <Link
                   to={slide.secondaryButtonLink}
-                  className="bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 py-3 px-8 rounded-md font-medium transition-colors"
+                  className="bg-transparent border border-primary-50 text-primary-50 hover:bg-primary-50 hover:text-primary-900 py-3 px-8 rounded-md font-medium transition-colors"
                 >
                   {slide.secondaryButtonText}
                 </Link>
@@ -147,14 +147,14 @@ const HeroSection = () => {
 
       {/* Navigation Arrows */}
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-20"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-primary-50 p-2 rounded-full hover:bg-primary-900/50 transition-colors z-20"
         onClick={prevSlide}
         aria-label="Previous slide"
       >
         <FiChevronLeft size={24} />
       </button>
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-20"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-primary-50 p-2 rounded-full hover:bg-primary-900/50 transition-colors z-20"
         onClick={nextSlide}
         aria-label="Next slide"
       >
@@ -168,7 +168,7 @@ const HeroSection = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2.5 h-2.5 rounded-full transition-all ${
-              currentSlide === index ? 'bg-white w-8' : 'bg-white/60'
+              currentSlide === index ? 'bg-primary-50 w-8' : 'bg-primary-50/60'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

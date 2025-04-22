@@ -8,7 +8,7 @@ const Navbar = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
   return (
-    <nav className="flex justify-between items-center p-4 bg-white shadow-md">
+    <nav className="flex justify-between items-center p-4 bg-primary-50 shadow-md">
       <div className="flex items-center">
         <img
           src="/logo.png"
@@ -18,14 +18,17 @@ const Navbar = () => {
         />
       </div>
       <div className="flex items-center space-x-4">
-        <FaUser className="cursor-pointer" onClick={() => navigate('/login')} />
+        <FaUser
+          className="cursor-pointer text-primary-700 hover:text-primary-900"
+          onClick={() => navigate('/login')}
+        />
         <div
           className="relative cursor-pointer"
           onClick={() => navigate('/cart')}
         >
-          <FaShoppingCart />
+          <FaShoppingCart className="text-primary-700 hover:text-primary-900" />
           {cartItems.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
+            <span className="absolute -top-2 -right-2 bg-accent-500 text-white text-xs px-1 rounded-full">
               {cartItems.length}
             </span>
           )}

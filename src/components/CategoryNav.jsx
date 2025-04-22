@@ -49,7 +49,7 @@ const CategoryNav = () => {
   }, []);
 
   return (
-    <nav className="bg-gray-100  shadow-sm">
+    <nav className="bg-primary-100 shadow-sm">
       <div className="container mx-auto px-4">
         {/* Desktop navigation */}
         <div className="hidden md:flex justify-center">
@@ -60,17 +60,17 @@ const CategoryNav = () => {
                 <li key={category.id}>
                   <Link
                     to={`/category/${category.slug}`}
-                    className="block py-3 text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                    className="block py-3 text-primary-700 hover:text-primary-900 transition-colors font-medium"
                   >
                     {category.name}
                   </Link>
                 </li>
               ))}
             <li className="relative group">
-              <button className="flex items-center py-3 text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+              <button className="flex items-center py-3 text-primary-700 hover:text-primary-900 transition-colors font-medium">
                 More <FiChevronDown className="ml-1" size={16} />
               </button>
-              <div className="absolute left-0 w-48 bg-white shadow-lg rounded-b-md overflow-hidden transform scale-0 group-hover:scale-100 transition-transform origin-top z-50">
+              <div className="absolute left-0 w-48 bg-primary-50 shadow-lg rounded-b-md overflow-hidden transform scale-0 group-hover:scale-100 transition-transform origin-top z-50">
                 <ul>
                   {categories
                     .filter((category) => !category.featured)
@@ -78,7 +78,7 @@ const CategoryNav = () => {
                       <li key={category.id}>
                         <Link
                           to={`/category/${category.slug}`}
-                          className="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                          className="block px-4 py-2 hover:bg-primary-100 text-primary-700"
                         >
                           {category.name}
                         </Link>

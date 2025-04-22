@@ -26,13 +26,13 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-secondary-50">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
         <div className="text-center">
-          <h1 className="text-3xl font-extrabold text-gray-900">
+          <h1 className="text-3xl font-extrabold text-primary-900">
             {isLogin ? 'Sign In' : 'Create Account'}
           </h1>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm text-primary-600">
             {isLogin ? 'Welcome back!' : 'Join us today!'}
           </p>
         </div>
@@ -42,7 +42,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-primary-700"
               >
                 Email address
               </label>
@@ -54,7 +54,7 @@ const Login = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 mt-1 border border-secondary-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -62,7 +62,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-primary-700"
               >
                 Password
               </label>
@@ -74,7 +74,7 @@ const Login = () => {
                 required
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 mt-1 border border-secondary-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
                 placeholder={isLogin ? 'Your password' : 'Create a password'}
               />
             </div>
@@ -87,11 +87,11 @@ const Login = () => {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                  className="w-4 h-4 text-primary-600 border-secondary-300 rounded focus:ring-primary-500"
                 />
                 <label
                   htmlFor="remember-me"
-                  className="block ml-2 text-sm text-gray-900"
+                  className="block ml-2 text-sm text-primary-900"
                 >
                   Remember me
                 </label>
@@ -100,7 +100,7 @@ const Login = () => {
               <div className="text-sm">
                 <Link
                   to="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                  className="font-medium text-accent-600 hover:text-accent-500"
                 >
                   Forgot your password?
                 </Link>
@@ -111,7 +111,7 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="flex justify-center w-full px-4 py-2 text-sm font-medium text-primary bg-primary-600 border border-transparent rounded-md shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             >
               {isLogin ? 'Sign In' : 'Sign Up'}
             </button>
@@ -122,7 +122,7 @@ const Login = () => {
           <button
             type="button"
             onClick={() => setIsLogin(!isLogin)}
-            className="font-medium text-indigo-600 hover:text-indigo-500"
+            className="font-medium text-accent-600 hover:text-accent-500"
           >
             {isLogin
               ? 'Need an account? Sign up'

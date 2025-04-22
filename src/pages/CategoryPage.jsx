@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../components/home/ProductCard';
+import { useTheme } from '../context/ThemeContext';
 
 const CategoryPage = () => {
   const { categorySlug } = useParams();
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const { setTheme } = useTheme();
+
+  // Set theme based on category
+  useEffect(() => {
+    if (categorySlug) {
+      setTheme(categorySlug);
+    }
+  }, [categorySlug, setTheme]);
 
   // This would typically be fetched from an API based on the category
   // Using mock data for now
@@ -78,7 +87,7 @@ const CategoryPage = () => {
           {[...Array(4)].map((_, index) => (
             <div
               key={index}
-              className="bg-gray-100 animate-pulse h-96 rounded-lg"
+              className="bg-gray-300 animate-pulse h-96 rounded-lg"
             ></div>
           ))}
         </div>
