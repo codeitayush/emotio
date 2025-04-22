@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.expo {
+module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
